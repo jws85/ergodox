@@ -4,7 +4,6 @@
 */
 #define ORYX_CONFIGURATOR
 
-#define TAP_TOGGLE 2
 #define ONESHOT_TAP_TOGGLE 9
 #define PERMISSIVE_HOLD
 
