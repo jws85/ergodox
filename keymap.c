@@ -23,7 +23,7 @@ enum layer_names {
 #define R_FUNC LT(LAYER_FUNC, KC_R)
 #define U_FUNC LT(LAYER_FUNC, KC_U)
 #define F_CURSE LT(LAYER_CURSR, KC_F)
-#define G_MOUSE LT(LAYER_MOUSE, KC_G)
+#define D_MOUSE LT(LAYER_MOUSE, KC_D)
 
 #define MO_MEDA MO(LAYER_MEDIA)
 
@@ -31,11 +31,13 @@ enum layer_names {
 #define MOD_ALT OSM(MOD_LALT)
 #define MOD_WIN OSM(MOD_LGUI)
 
+#define ASSIGND _______
+
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox_pretty(
     KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______,    _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_ESC,
     KC_TAB,  KC_Q,    KC_W,    KC_E,    R_FUNC,  KC_T,    KC_EQL,     KC_MINS, KC_Y,    U_FUNC,  KC_I,    KC_O,    KC_P,    KC_BSLS,
-    KC_GRV,  KC_A,    KC_S,    KC_D,    F_CURSE, G_MOUSE,                      KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+    KC_GRV,  KC_A,    KC_S,    D_MOUSE, F_CURSE, KC_G,                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC,    KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
     _______, _______, _______, MOD_WIN, MOD_CTL,                                        MOD_CTL, MOD_WIN, _______, _______, _______,
                                                  MOD_ALT, _______,    _______, MOD_ALT,
@@ -44,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [LAYER_FUNC] = LAYOUT_ergodox_pretty(
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,    _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-    _______, _______, _______, _______, XXXXXXX, _______, KC_F11,     KC_F12,  _______, XXXXXXX, _______, _______, _______, _______,
+    _______, _______, _______, _______, ASSIGND, _______, KC_F11,     KC_F12,  _______, ASSIGND, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______,                                        KC_PSCR, _______, _______, _______, _______,
@@ -55,7 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_CURSR] = LAYOUT_ergodox_pretty(
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, XXXXXXX, MO_MEDA,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
+    _______, _______, _______, MO_MEDA, ASSIGND, _______,                      KC_LEFT, KC_DOWN, KC_UP,   KC_RGHT, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    BSPC_WD, KC_HOME, KC_PGDN, KC_PGUP, KC_END,  _______, _______,
     _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______,
                                                  _______, _______,    _______, _______,
@@ -65,7 +67,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_MOUSE] = LAYOUT_ergodox_pretty(
     _______, _______, _______, _______, _______, _______, _______,    KC_ACL0, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    KC_ACL1, WEB_CTB, WEB_BCK, WEB_FWD, WEB_NTB, _______, _______,
-    _______, _______, _______, _______, MO_MEDA, XXXXXXX,                      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,
+    _______, _______, _______, ASSIGND, MO_MEDA, _______,                      KC_MS_L, KC_MS_D, KC_MS_U, KC_MS_R, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    KC_ACL2, KC_WH_L, KC_WH_D, KC_WH_U, KC_WH_R, _______, _______,
     _______, _______, _______, _______, _______,                                        KC_BTN3, _______, _______, _______, _______,
                                                  _______, _______,    _______, _______,
@@ -75,7 +77,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_MEDIA] = LAYOUT_ergodox_pretty(
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, XXXXXXX, XXXXXXX,                      KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, _______, _______,
+    _______, _______, _______, ASSIGND, ASSIGND, _______,                      KC_MPRV, KC_VOLD, KC_VOLU, KC_MNXT, _______, _______,
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______,                                        KC_MUTE, _______, _______, _______, _______,
                                                  _______, _______,    _______, _______,
