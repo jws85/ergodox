@@ -20,8 +20,8 @@ enum layer_names {
 #define WEB_NTB LALT(KC_T)
 #define WEB_CTB LALT(KC_W)
 
-#define R_FUNC LT(LAYER_FUNC, KC_R)
-#define U_FUNC LT(LAYER_FUNC, KC_U)
+#define A_FUNC LT(LAYER_FUNC, KC_A)
+#define SCL_FUN LT(LAYER_FUNC, KC_SCLN)
 #define F_CURSE LT(LAYER_CURSR, KC_F)
 #define D_MOUSE LT(LAYER_MOUSE, KC_D)
 
@@ -36,8 +36,8 @@ enum layer_names {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox_pretty(
     KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    _______,    _______, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_ESC,
-    KC_TAB,  KC_Q,    KC_W,    KC_E,    R_FUNC,  KC_T,    KC_EQL,     KC_MINS, KC_Y,    U_FUNC,  KC_I,    KC_O,    KC_P,    KC_BSLS,
-    KC_GRV,  KC_A,    KC_S,    D_MOUSE, F_CURSE, KC_G,                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
+    KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_EQL,     KC_MINS, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
+    KC_GRV,  A_FUNC,  KC_S,    D_MOUSE, F_CURSE, KC_G,                         KC_H,    KC_J,    KC_K,    KC_L,    SCL_FUN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC,    KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
     _______, _______, _______, MOD_WIN, MOD_CTL,                                        MOD_CTL, MOD_WIN, _______, _______, _______,
                                                  MOD_ALT, _______,    _______, MOD_ALT,
@@ -46,8 +46,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   ),
   [LAYER_FUNC] = LAYOUT_ergodox_pretty(
     _______, KC_F1,   KC_F2,   KC_F3,   KC_F4,   KC_F5,   _______,    _______, KC_F6,   KC_F7,   KC_F8,   KC_F9,   KC_F10,  _______,
-    _______, _______, _______, _______, ASSIGND, _______, KC_F11,     KC_F12,  _______, ASSIGND, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______, _______,                      _______, _______, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______, _______, KC_F11,     KC_F12,  _______, _______, _______, _______, _______, _______,
+    _______, ASSIGND, _______, _______, _______, _______,                      _______, _______, _______, _______, ASSIGND, _______,
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
     _______, _______, _______, _______, _______,                                        KC_PSCR, _______, _______, _______, _______,
                                                  _______, _______,    RESET,   LED_LVL,
