@@ -42,8 +42,8 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_EQL,     KC_MINS, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
     KC_GRV,  A_FUNC,  KC_S,    D_MOUSE, F_CURSE, KC_G,                         KC_H,    KC_J,    KC_K,    KC_L,    SCL_FUN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC,    KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-    _______, _______, _______, MOD_WIN, MOD_CTL,                                        MOD_CTL, MOD_WIN, _______, _______, _______,
-                                                 MOD_ALT, _______,    _______, MOD_ALT,
+    MOD_ALT, _______, _______, MOD_WIN, MOD_CTL,                                        MOD_CTL, MOD_WIN, _______, _______, MOD_ALT,
+                                                 _______, _______,    _______, _______,
                                                           _______,    _______,
                                         KC_SPC,  KC_BSPC, _______,    _______, KC_DEL,  KC_ENT
   ),
@@ -52,10 +52,10 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     _______, _______, _______, _______, _______, _______, KC_F11,     KC_F12,  _______, _______, _______, _______, _______, _______,
     _______, ASSIGND, _______, _______, _______, _______,                      _______, _______, _______, _______, ASSIGND, _______,
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
-    _______, _______, _______, _______, _______,                                        KC_PSCR, _______, _______, _______, _______,
+    _______, _______, _______, _______, _______,                                        _______, _______, _______, _______, _______,
                                                  _______, _______,    RESET,   LED_LVL,
                                                           _______,    _______,
-                                        _______, _______, _______,    KC_CAPS, _______, TO_GAME
+                                        _______, _______, TO_GAME,    KC_CAPS, _______, KC_PSCR
   ),
   [LAYER_CURSR] = LAYOUT_ergodox_pretty(
     _______, _______, _______, _______, _______, _______, _______,    _______, _______, _______, _______, _______, _______, _______,
@@ -92,7 +92,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_EQL,     KC_MINS, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
     KC_GRV,  KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                         KC_H,    KC_J,    KC_K,    KC_L,    KC_SCLN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_LBRC,    KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
-    _______, _______, _______, MOD_WIN, MOD_CTL,                                        MOD_CTL, MOD_WIN, _______, _______, _______,
+    MOD_ALT, _______, _______, MOD_WIN, MOD_CTL,                                        MOD_CTL, MOD_WIN, _______, _______, MOD_ALT,
                                                  MOD_ALT, TO_BASE,    TO_BASE, MOD_ALT,
                                                           TO_BASE,    TO_BASE,
                                         KC_SPC,  KC_BSPC, TO_BASE,    TO_BASE, KC_DEL,  KC_ENT
