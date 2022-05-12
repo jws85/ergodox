@@ -30,9 +30,9 @@ enum layer_names {
 #define TO_GAME TO(LAYER_GAMES)
 #define TO_BASE TO(LAYER_BASE)
 
-#define MOD_CTL OSM(MOD_LCTL)
-#define MOD_ALT OSM(MOD_LALT)
-#define MOD_WIN OSM(MOD_LGUI)
+#define MOD_CTL KC_LCTL
+#define MOD_ALT KC_LALT
+#define MOD_WIN KC_LGUI
 #define COMPOSE KC_RALT
 #define ASSIGND _______
 
