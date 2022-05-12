@@ -9,9 +9,6 @@ Warning: haven't tried these steps yet!
 
 This is more for me than for others.
 
-This is also assuming you have Nix installed.  Again, more for my weird setup.
-Sorry!
-
 Clone this repo somewhere:
 
 ```bash
@@ -41,12 +38,29 @@ Symlink the `ergodox` directory into the `qmk_firmware` hierarchy:
 ln -s $YOUR_DEV/ergodox keyboards/ergodox_ez/keymaps/jws85
 ```
 
-Here's the Nix part, for fetching the `qmk` utility and its dependencies:
+## Nix setup
+
+This is not strictly necessary, if you have vanilla Linux you can do that as
+well, at least until that git commit's dependencies are deprecated... then
+Nix might be your only option.
+
+QMK has a `shell.nix` file for use with the [Nix package manager](https://nixos.org/).
+This pulls in cross-compilation toolchains, programmers, and such, and at the
+end of it, you can run the `qmk` utility to build your stuff as per normal, and
+you know you have the versions of everything for this specific version of QMK.
+
+Install the Nix package manager (you don't need NixOS) and [direnv](https://github.com/direnv/direnv).
+With those, what I like to do is go in the `qmk_firmware` folder and run:
 
 ```bash
 echo 'use nix' > .envrc
 direnv allow
-# go get something to drink or doomscroll or something
+
+# The moment you run 'direnv allow' it'll build all QMK dependencies and
+# the QMK utility!
+#
+# Depending on your hardware, this could take anywhere from "get a quick
+# drink" to "go get a nice dinner out"...
 ```
 
 From here you should be able to `qmk build` or `qmk flash` and it
