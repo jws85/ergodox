@@ -63,5 +63,5 @@ direnv allow
 # drink" to "go get a nice dinner out"...
 ```
 
-From here you should be able to `qmk build` or `qmk flash` and it
-do the right thing.
+From here you should be able to `qmk build` or `qmk flash` and it do the right
+thing, but only within the `qmk_firmware` directory.
