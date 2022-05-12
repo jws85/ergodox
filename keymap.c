@@ -33,11 +33,12 @@ enum layer_names {
 #define MOD_CTL OSM(MOD_LCTL)
 #define MOD_ALT OSM(MOD_LALT)
 #define MOD_WIN OSM(MOD_LGUI)
+#define COMPOSE KC_RALT
 #define ASSIGND _______
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_ergodox_pretty(
-    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    KC_RALT,    KC_RALT, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_ESC,
+    KC_ESC,  KC_1,    KC_2,    KC_3,    KC_4,    KC_5,    COMPOSE,    COMPOSE, KC_6,    KC_7,    KC_8,    KC_9,    KC_0,    KC_ESC,
     KC_TAB,  KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,    KC_EQL,     KC_LBRC, KC_Y,    KC_U,    KC_I,    KC_O,    KC_P,    KC_BSLS,
     KC_GRV,  A_FUNC,  KC_S,    D_MOUSE, F_CURSE, KC_G,                         KC_H,    KC_J,    KC_K,    KC_L,    SCL_FUN, KC_QUOT,
     KC_LSFT, KC_Z,    KC_X,    KC_C,    KC_V,    KC_B,    KC_MINS,    KC_RBRC, KC_N,    KC_M,    KC_COMM, KC_DOT,  KC_SLSH, KC_RSFT,
